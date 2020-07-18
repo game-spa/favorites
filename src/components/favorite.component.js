@@ -13,13 +13,14 @@ const useStyles = makeStyles({
     width: 245,
     height: 360,
     marginBottom: 30,
+    marginRight: 12,
   },
   media: {
     height: 140,
   },
 });
 
-export default function Favorite({ image, name, released }) {
+export default function Favorite({ image, name, released, onClick }) {
   const classes = useStyles();
 
   return (
@@ -36,7 +37,7 @@ export default function Favorite({ image, name, released }) {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
+        <Button size="small" color="primary" onClick={onClick}>
           Remove
         </Button>
       </CardActions>
